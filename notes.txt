@@ -35,3 +35,10 @@ a send function will finish the middleware
 pipeline
 
 the source code from static lacks semicolons
+
+Static middleware serves everything under the
+specified folder, in this case, public
+That's why the image is also there :D
+
+We're serving static files, like index.html
+and the picture.
