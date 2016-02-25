@@ -16,3 +16,22 @@ using static middleware
 
 serving static files from the public folder
 app.use(express.static('public'));
+
+
+Understand middleware
+middleware are functions added to the stack that
+have access to request and response objects that
+are executed sequentially.
+
+A request or response passes through each layer of
+middleware until they get to one endpoint of the
+architechture (server-client)
+
+next() function
+is called to move to the next middleware.
+
+a send function will finish the middleware
+
+pipeline
+
+the source code from static lacks semicolons
