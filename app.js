@@ -5,10 +5,12 @@ var app = express();
 //the get method creates a route that accepts
 //http requests
 
+app.use(express.static('public'));
+
 // '/'=root path
-app.get('/', function(request, response){
-  response.sendFile(__dirname + '/public/index.html');
-});
+// app.get('/', function(request, response){
+//   response.sendFile(__dirname + '/public/index.html');
+// });
 
 app.get('/blocks', function(request,response){
   var blocks = ['holi', 'Movable', 'Rotating'];
