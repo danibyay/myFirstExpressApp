@@ -17,8 +17,14 @@ app.use(express.static('public'));
 
 app.get('/blocks', function(request,response){
   var blocks = ['holi', 'Movable', 'Rotating'];
-  //response.send(blocks); //sends to JSON
-  response.json(blocks); //same as above
+  var limit = request.query.limit;
+  if(limit>=0){
+    response.json(blocks.slice(0, limit));
+  }else{
+    response.json(blocks); //same as above
+  }
+
+
 });
 
 app.get('/html', function(request,response){

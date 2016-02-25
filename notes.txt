@@ -52,3 +52,9 @@ express-static is the only middleware already shipped with express 4
 
 github.com/expressjs/morgan
 is a real logger thingy
+
+
+
+User params:
+*****************
+To let the user choose which data to retrieve
