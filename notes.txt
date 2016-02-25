@@ -42,3 +42,7 @@ That's why the image is also there :D
 
 We're serving static files, like index.html
 and the picture.
+
+
+to use middleware,
+app.use();
