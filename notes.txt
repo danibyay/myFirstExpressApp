@@ -46,3 +46,9 @@ and the picture.
 
 to use middleware,
 app.use();
+
+
+express-static is the only middleware already shipped with express 4
+
+github.com/expressjs/morgan
+is a real logger thingy

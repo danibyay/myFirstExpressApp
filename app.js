@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 
+var logger = require('./logger');
+app.use(logger); //use this middleware
+
 //the express methods, create routes
 //the get method creates a route that accepts
 //http requests
