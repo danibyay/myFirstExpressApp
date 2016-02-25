@@ -15,14 +15,28 @@ app.use(express.static('public'));
 //   response.sendFile(__dirname + '/public/index.html');
 // });
 
-app.get('/blocks', function(request,response){
-  var blocks = ['holi', 'Movable', 'Rotating'];
-  var limit = request.query.limit;
-  if(limit>=0){
-    response.json(blocks.slice(0, limit));
+var blocks = {
+  'Fixed': 'Fastened securely in position',
+  'Movable': 'Capable of being moved',
+  'Rotating': 'Moving in a circle around its center'
+};
+
+
+
+app.get('/blocks/:name', function(request,response){
+  var description = blocks[request.params.name];
+  if(!description){
+    response.status(404).json('no description found for '+request.params.name);
   }else{
-    response.json(blocks); //same as above
+    response.json(description);
   }
+  // var blocks = ['Fixed', 'Movable', 'Rotating'];
+  // var limit = request.query.limit;
+  // if(limit>=0){
+  //   response.json(blocks.slice(0, limit));
+  // }else{
+  //   response.json(blocks); //same as above
+  // }
 
 
 });

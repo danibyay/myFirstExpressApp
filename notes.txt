@@ -58,3 +58,6 @@ is a real logger thingy
 User params:
 *****************
 To let the user choose which data to retrieve
+
+limit results or ask for a specific type of result
+dynamic routes!!
