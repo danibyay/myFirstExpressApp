@@ -7,10 +7,7 @@ var app = express();
 
 // '/'=root path
 app.get('/', function(request, response){
-  //response.send('Hello world');
-  response.write('HEllo world');
-  response.end();
-  //these are node functions, as opposed to send
+  response.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('/blocks', function(request,response){
