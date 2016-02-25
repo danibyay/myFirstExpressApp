@@ -1,0 +1,9 @@
+Middleware are the building blocks of express
+to be consumed by web applications
+-ember -angular -jquery
+
+rich javascript applications allow for a
+more interactive experience on the web
+
+So that when there is a request not the whole
+page is reloaded
