@@ -29,6 +29,10 @@ app.param('name', function(request,response,next){
   next();
 });
 
+app.get('/blocks', function(request, response){
+  response.json(Object.keys(blocks));
+});
+
 app.get('/blocks/:name', function(request,response){
   var description = blocks[request.blockName];
   if(!description){
